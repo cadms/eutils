@@ -50,7 +50,7 @@ class TestEutils < Test::Unit::TestCase
     ids = [11877539, 11822933, 11871444]
     webenv, querykey = eutils.epost(ids)
     assert_equal 1, querykey
-    assert_equal "NCID", webenv.scan(/^(\w{4})/).flatten.first
+    assert_equal "MCID", webenv.scan(/^(\w{4})/).flatten.first
     webenv, querykey = eutils.epost(ids, "invalid")
     assert_nil querykey
     assert_nil webenv
