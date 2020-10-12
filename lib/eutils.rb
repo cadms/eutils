@@ -120,7 +120,7 @@ class Eutils
   def egquery(term)
     term.strip! if term.class == String
     #server = EUTILS_HOST + "egquery.fcgi"
-    server = "http://eutils.ncbi.nlm.nih.gov/gquery/"
+    server = "https://eutils.ncbi.nlm.nih.gov/gquery/"
     params = {"term" => term, "retmode" => "xml"}
     response = post_eutils(server, params)
     return Hash.from_xml(response)["Result"]
