@@ -15,7 +15,7 @@ class Eutils
   @@last_access = nil
   @@last_access_mutex = nil
   attr_accessor :tool, :email
-  ActiveSupport::XmlMini.backend = "LibXMLSAX" # or "NokogiriSAX"
+  ActiveSupport::XmlMini.backend = "NokogiriSAX" # or "LibXMLSAX"
 
   def initialize(tool = nil, email = nil)
     @tool, @email = tool, email
